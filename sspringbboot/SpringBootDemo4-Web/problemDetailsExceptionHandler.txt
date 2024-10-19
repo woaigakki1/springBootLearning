@@ -1,0 +1,21 @@
+problemDetailsExceptionHandler 只能处理springboot指定的一些错误
+即以下异常
+    @ExceptionHandler({
+    			HttpRequestMethodNotSupportedException.class,
+    			HttpMediaTypeNotSupportedException.class,
+    			HttpMediaTypeNotAcceptableException.class,
+    			MissingPathVariableException.class,
+    			MissingServletRequestParameterException.class,
+    			MissingServletRequestPartException.class,
+    			ServletRequestBindingException.class,
+    			MethodArgumentNotValidException.class,
+    			NoHandlerFoundException.class,
+    			AsyncRequestTimeoutException.class,
+    			ErrorResponseException.class,
+    			ConversionNotSupportedException.class,
+    			TypeMismatchException.class,
+    			HttpMessageNotReadableException.class,
+    			HttpMessageNotWritableException.class,
+    			BindException.class
+    		})
+    		可以自己再加一些自定义流程。例如加一些报错的参数等等。仅限于以上异常处理时

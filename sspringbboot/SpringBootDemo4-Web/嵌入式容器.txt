@@ -1,0 +1,51 @@
+1.自动配置原理
+    Springboot默认嵌入tomcat作为Servlet容器
+    自动配置类是ServletWebServerFactoryAutoConfiguration
+
+
+ServletWebServerFactoryAutoConfiguration  自动配置了嵌入式容器场景
+ServerProperties配置类 所有和服务器有关的配置都在以server开头的
+2.server开头的都是服务器的配置 例如 端口port等等
+3.ServletWebServerFactoryAutoConfiguration  @Import导入了tomcat等服务器
+    a.导入 Tomcat,jetty,undertow.等条件注解 系统需要导包才能用
+    b.默认放入的是tomcat,给容器中放入了ServletWebServerFactory 放入了一个web服务器工厂 专门制造服务器
+    c.web服务器中都有一个方法叫做getWebServer 获取到web服务器
+    d.TomcatServletWebServerFactory创造了tomcat
+4.servletWebServerFactory什么时候会创建出WebServer
+5.ServletWebServerApplicationContext ioc容器 启动的时候会创建web服务器
+6.Spring容器刷新 或者启动的时候 会预留一个时机来刷新子容器 onrefresh
+7.refresh() 容器刷新 十二大步刷新子容器会调用 OnRefresh
+@Override
+	protected void onRefresh() {
+		super.onRefresh();
+		try {
+			createWebServer();
+		}
+		catch (Throwable ex) {
+			throw new ApplicationContextException("Unable to start web server", ex);
+		}
+	}
+Web场景的Spring容器启动，在onrefresh的时候 会调用创建web服务器的方法
+web服务器的创建是根据WebServerFactory搞定的，容器会根据有什么包条件注解
+默认EmbeddedTomcat会给容器中放一个tomcatServletWebServerFactory导致项目启动自动创建web服务器 tomcat
+
+
+用法就是
+    1.修改server的相关配置就可以相关服务器的相关参数
+    2.可以自定义服务器  有一个@ConditionalOnMissingBean注解代表可以自己创建一个  只需要放一个ServletWebServerFactory
+
+    如果要切换服务器不适用tomcat只需要在pom中修改jar
+
+
+
+
+
+
+
+
+
+
+    web场景开发有三种方式
+    1.全自动  用法就是直接写控制器逻辑。使用application.properties来进行配置
+    2.半自动  用法就是需要有 @Configuration和WebMvcConfigurer 但是不要标注@EnableWebMvc 效果为保留自动配置的效果 同时具有手动配置一部分功能
+    3.全手动  @Configuration和WebMvcConfigurer 并且标注@EnableWebMvc 效果为禁用全自动配置效果

@@ -1,0 +1,55 @@
+# 键值对空格区分
+# 属性有层级关系 使用下一行空两格空格
+# 左侧对齐的代表同一层属性 yml大小写敏感 支持数组 序列 map hashmap等
+server:
+  port: 9090
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+# 使用yml配置复杂对象
+person:
+  name: 丁真
+  age: 15
+  birthday: 2015/15/15 15:15:15
+  like: false
+  child:
+    name: 张顺飞
+    age: 15
+    birthday: 2015/15/15 15:15:15
+    text:
+      - abc
+      - def
+      - |
+        dogs:
+          - name: sb
+            age: 15
+          - name: caonima
+            age: 11
+      - >
+        cats:
+          c1:
+            name:haha
+            age:3
+      - >
+        我测
+        你们
+        吗
+---  #下边可看作单独的一个文档
+  dogs:
+    - name: 小黑
+      age: 1
+    - name: 小白
+      age: 2
+  cats:
+    c1:
+      name: 花花
+      age: 1
+    c2: {name: ww,age: 2}
+    #对象也可以用花括号
+

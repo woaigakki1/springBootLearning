@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.7.17-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../mavven/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.17-SNAPSHOT/spring-boot-autoconfigure-2.7.17-20231019.050225-51.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../mavven/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.17-SNAPSHOT/spring-boot-autoconfigure-2.7.17-20231019.050225-51-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../mavven/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.4/spring-boot-autoconfigure-3.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../mavven/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.4/spring-boot-autoconfigure-3.1.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../mavven/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.17-SNAPSHOT/spring-boot-autoconfigure-2.7.17-20231019.050225-51-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

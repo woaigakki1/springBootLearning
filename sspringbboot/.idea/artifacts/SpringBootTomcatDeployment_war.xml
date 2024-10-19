@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringBootTomcatDeployment:war">
+    <output-path>$PROJECT_DIR$/SpringBootTomcatDeployment/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SpringBootTomcatDeployment</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SpringBootTomcatDeployment-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringBootTomcatDeployment:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,32 @@
+ 全手动模式
+        @EnableWebMvc 禁用默认配置
+        @WebMvcConfigurer 组件 定义springmvc默认行为
+
+
+1.WebMvcAutoConfiguration中的自动配置类
+   a.OrderedHiddenHttpMethodFilter  支持restful的filter
+   b.OrderedFormContentFilter   支持非post携带请求体数据的请求
+   c.EnableWebMvcConfiguration
+        RequestMappingHandlerAdapter
+        welcomePageHandlerMapping  欢迎页支持的功能 模板引擎目录放置一个index.html /index.jsp 项目访问就默认展示这个界面
+        localeResolver 配置国际化信息
+        flashMapManager 共享临时数据
+        FormattingConversionService 定义日期格式
+        Validator 数据校验
+        ConfigurableWebBindingInitializer 请求参数的封装与绑定
+        ExceptionHandlerExceptionResolver 默认的异常解析器
+        ContentNegotiationManager 内容协商管理器
+   d.WebMvcAutoConfigurationAdapter
+        定义好了WebMvcConfigurer底层的默认行为
+        视图解析器 InternalResourceViewResolver
+        BeanNameViewResolver 另一种视图解析器  视图名就是组件名 返回的字符串进行前后缀拼接 此时的字符串为一个@Controller的名字 跳转到某一个controller执行方法
+        ContentNegotiatingViewResolver 内容协商处理器
+        RequestContextFilter 请求上下文的过滤器  任意位置直接获取当前请求
+        静态资源的规则
+   d.WebMvcConfigurer 定义了mvc默认的底层行为
+
+
+   @EnableWebMvc禁用了默认行为
+   WebMvcAutoConfiguration中有一个注解为@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
+   而@EnableWebMvc中有一个注解为@Import(DelegatingWebMvcConfiguration.class) 这个class继承了WebMvcConfigurationSupport.class
+   所以一旦有@Enable注解那么WebMvcAutoConfiguration就会失效了

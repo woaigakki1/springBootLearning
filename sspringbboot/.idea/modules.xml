@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HttpMessageConveterTest/HttpMessageConveterTest.iml" filepath="$PROJECT_DIR$/HttpMessageConveterTest/HttpMessageConveterTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot3Demo5-SSM/SpringBoot3Demo5-SSM.iml" filepath="$PROJECT_DIR$/SpringBoot3Demo5-SSM/SpringBoot3Demo5-SSM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot3Demo6-features/SpringBoot3Demo6-features.iml" filepath="$PROJECT_DIR$/SpringBoot3Demo6-features/SpringBoot3Demo6-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot3Demo7-core/SpringBoot3Demo7-core.iml" filepath="$PROJECT_DIR$/SpringBoot3Demo7-core/SpringBoot3Demo7-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootDemo2/SpringBootDemo2.iml" filepath="$PROJECT_DIR$/SpringBootDemo2/SpringBootDemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootDemo3/SpringBootDemo3.iml" filepath="$PROJECT_DIR$/SpringBootDemo3/SpringBootDemo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootDemo4-Web/SpringBootDemo4-Web.iml" filepath="$PROJECT_DIR$/SpringBootDemo4-Web/SpringBootDemo4-Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootExceptionTest/SpringBootExceptionTest.iml" filepath="$PROJECT_DIR$/SpringBootExceptionTest/SpringBootExceptionTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootTomcatDeployment/SpringBootTomcatDeployment.iml" filepath="$PROJECT_DIR$/SpringBootTomcatDeployment/SpringBootTomcatDeployment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boot3-08-robot-starter/boot3-08-robot-starter.iml" filepath="$PROJECT_DIR$/boot3-08-robot-starter/boot3-08-robot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootInitializer1Test/springbootInitializer1Test.iml" filepath="$PROJECT_DIR$/springbootInitializer1Test/springbootInitializer1Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sspringbboot.iml" filepath="$PROJECT_DIR$/.idea/sspringbboot.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    组件注册-->
+    <bean id="user" class="com.example.springbootdemo2.bean.User" scope="prototype">
+        <property name="id" value="1"></property>
+        <property name="name" value="dingzhen"></property>
+    </bean>
+    <bean id="cat" class="com.example.springbootdemo2.bean.Cat">
+        <property name="id" value="1"></property>
+        <property name="name" value="Tom"></property>
+    </bean>
+</beans>

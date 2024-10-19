@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--加提示-->
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<p1>用来动态取值</p1><br>
+<p1>${} -> 变量取值 使用model共享给界面的值都直接用${}</p1><br>
+<p1>@{} => url 路径</p1><br>
+<p1>#{} => 国际化信息</p1>
+<br>
+<p1>~{} => 片段引用</p1>
+<br>
+<p1>*{} => 变量选择 需要配合th:object 来绑定对象</p1>
+<h1>fuck u <span th:text="${name}"></span></h1>
+<br>
+th:text 替换标签体的内容 <h2 th:text="${name}">我测你们吗</h2>
+th:utext 替换标签体内容 不会转义html标签 真正显示为html该有的样式 <h1 th:utext="${name}">阿弥诺斯</h1>
+<hr>
+th:任意html属性<img th:src="${imgUrl}" src="2.jpg" style="height: 300px;"><br>
+
+th:attr 任意属性指定<img src="2.jpg" th:attr="src=${imgUrl},style=${styleSettings}" style="height: 300px;"><br>
+th:其他属性 <img src="soOn_ho3.jpg"  th:style="${styleSettings}" th:if="${whetherShow}">
+<br><hr>
+<img src="1.jpg" style="height: 200px;" alt="">
+<br>
+用@{} 的好处是 当context-path改变的时候 它也会动态的跟随。如果是${}那么还需要改src
+用@{}取值 <img th:src="@{soOn_ho3.jpg}" th:style="${styleSettings}" alt=""><br>
+用@{} 动态取值 <img th:src="@{${imgUrl}}" th:style="${styleSettings}" alt="">
+<br>
+自动改大写 <h1 th:text="${#strings.toUpperCase(toUpperCaseTest)}"></h1><br>
+拼接操作 <h1 th:utext="|hi ${#strings.toUpperCase(name)}fuck u|"></h1>
+</body>
+</html>
